@@ -1,5 +1,5 @@
 <!-- details.cfm -->
-
+<cfparam name="searchme" default="" />
 <!--- Dumping form variables for debugging purposes --->
 <cfdump var="#form#">
 
@@ -7,7 +7,7 @@
 <cfset bookstoreFunctions = createObject("component", "bookstore")>
 
 <!--- Calling the obtainSearchResults function from the bookstore.cfc component --->
-<cfset bookInfo = bookstoreFunctions.obtainSearchResults(form.searchme)>
+<cfset bookInfo = bookstoreFunctions.obtainSearchResults(searchme)>
 
 <!--- Checking the number of search results and displaying appropriate messages --->
 <cfif bookInfo.recordcount eq 0>
