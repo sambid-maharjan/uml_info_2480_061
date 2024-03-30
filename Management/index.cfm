@@ -11,9 +11,7 @@
     <div id="wrapper" class="container">
         <div id="navarea">NAV</div>
         <div id="mainarea">
-            <!-- Pass the SEARCHME variable to the details.cfm page -->
-            <cfparam name="searchme" default="">
-            <cfinclude template="details.cfm">
+            <cfinclude template="#tool#.cfm" />
         </div>
     </div>
 </body>
