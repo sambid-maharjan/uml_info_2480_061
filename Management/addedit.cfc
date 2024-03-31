@@ -72,8 +72,6 @@ public query function sideNavBooks(required string qterm) {
     return qs.execute().getResult();
 }
 
-
-
     // Function to retrieve book details based on ISBN13
     public query function bookDetails(required string isbn13) {
         var qs = new Query(datasource=variables.datasource);

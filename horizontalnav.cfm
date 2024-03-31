@@ -1,4 +1,5 @@
 <cfoutput>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="##">
         <img src="images/rdb.png" alt="Read Dees Books Logo"/>
@@ -22,6 +23,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="##">Events</a>
             </li>
+            
         </ul>
         <form class="d-flex" action="#cgi.script_name#?p=details" method="POST">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

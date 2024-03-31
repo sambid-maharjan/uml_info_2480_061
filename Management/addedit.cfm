@@ -11,13 +11,11 @@
 <body>
 
 <!-- Search Form -->
-<form class="d-flex" action="details.cfm" method="post"> <!-- Ensure that action points to details.cfm -->
+<form class="d-flex" action="../details.cfm" method="post"> <!-- Ensure that action points to details.cfm -->
     <input type="hidden" name="searchme" value="#form.searchme#"> <!-- Ensure that the correct variable name is used -->
     <input class="form-control me-2" type="search" name="qterm" value="#form.searchme#" placeholder="Search" aria-label="Search"> <!-- Use the correct variable name -->
     <button class="btn btn-outline-success" type="submit">Search</button>
 </form>
-
-
 
 <cfparam name="book" default="">
 <cfparam name="qterm" default="">
@@ -214,6 +212,17 @@
                 </div>
             </div>
             
+            <!-- Genre Selection -->
+        <div class="mb-3">
+            <label for="genres" class="form-label">Genres</label>
+            <select multiple class="form-control" id="genres" name="genres">
+                <!-- Dynamically populate genres -->
+                <cfloop array="#allGenres#" item="genre">
+                    <option value="#genre.genreId#">#genre.genreName#</option>
+                </cfloop>
+            </select>
+        </div>
+
             
             <!-- CKEditor for the Description field -->
             <div class="form-group">

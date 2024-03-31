@@ -12,11 +12,11 @@
 <!--- Checking the number of search results and displaying appropriate messages --->
 <cfif bookInfo.recordcount eq 0>
     <!--- No results message --->
-    <cfoutput>#noResults()#</cfoutput>
+    <cfoutput>#bookstoreFunctions.noResults()#</cfoutput>
 <cfelseif bookInfo.recordcount eq 1>
     <!--- One result message --->
-    <cfoutput>#oneResult()#</cfoutput>
+    <cfoutput>#bookstoreFunctions.oneResult()#</cfoutput>
 <cfelse>
     <!--- Multiple results message --->
-    <cfoutput>#manyResults()#</cfoutput>
+    <cfoutput>#bookstoreFunctions.manyResults()#</cfoutput>
 </cfif>
